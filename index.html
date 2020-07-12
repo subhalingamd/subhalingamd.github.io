@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Subhalingam D</title>
+
+
+    <style>
+        /* For loader */
+        #ld{
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        #ld #ld-content {
+            padding-left: 15px;
+            position: absolute;
+            z-index: 1002;
+            top: 50%;
+            /*left: 50%;
+            transform: translate(-50%, -50%);*/
+            transform: translateY(-50%);
+            text-align: left
+        }
+        #ld-content h1,#ld-content h2 {
+            margin: 0
+        }
+        #ld-content h1 {
+            padding-bottom: 10px;
+            color: #fff;
+            font-weight: 900;
+            font-size: 5em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 0.9em
+        }
+        #ld-content h2 {
+            padding-bottom: 25px;
+            color: #a0cfee;
+            font-weight: 500;
+            font-size: 2.25em;
+            margin-bottom: 15px
+        }
+        #ld-overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.75);
+            z-index: 1001;
+            animation: ld-bg 1.75s linear 0 infinite;
+        }
+        
+       
+        .lds-ripple {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 80px;
+        }
+        .lds-ripple div {
+          position: absolute;
+          border: 4px solid #fff;
+          opacity: 1;
+          border-radius: 50%;
+          animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        .lds-ripple div:nth-child(2) {
+          animation-delay: -0.5s;
+        }
+        @keyframes lds-ripple {
+          0% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+          }
+          100% {
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+          }
+        }
+        @keyframes ld-bg {
+          0% {
+            background-color: rgba(0,0,0,0.75);
+          }
+          50% {
+            background-color: rgba(0,0,0,1);
+          }
+          100% {
+            background-color: rgba(0,0,0,0.75);
+          }
+        }
+
+        @media only screen and (max-width: 992px) {
+
+            #ld-content{
+                margin-left: 20vw;
+            }
+
+            #ld-content h1, #ld-content h2{
+                display: none;
+            }
+
+        }
+
+    </style>
+
+
+    <meta name="description" content="Subhalingam D is a sophomore at IIT Delhi and this is his personal website">
+    <meta name="keywords" content="subhalingamd, subhalingam, subhu2008, subhu">
+    <meta name="author" content="Subhalingam D">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="google-site-verification" content="mQBwSJChbaQDpmReGndwk2AHedJ9gcUu5bWEjTY-5uE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <noscript>
+        <link href="./css/style-noscript.css" rel="stylesheet">
+    </noscript>
+
+</head>
+
+<body>
+    <!--Loader-->
+    <div class="loader" id="ld">
+        <div id="ld-content">
+            <h1>Subhalingam D</h1>
+            <h2>Sophomore, IIT Delhi</h2>
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+        <div id="ld-overlay"></div>
+    </div>
+
+
+
+    <header class="header">
+      <a href="#lead" class="logo">Subhalingam D</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <!---<li><a href="#experience">Experience</a></li>-->
+        <li><a href="#education">Education</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <section id="lead">
+        <div id="lead-content">
+            <h1>Subhalingam D</h1>
+            <h2>Sophomore, IIT Delhi</h2>
+            <a href="SubhalingamD.CV.pdf" target="_blank" class="btn-rounded-white">View Résumé</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down"></div>
+        <!-- End #lead-down -->
+    </section>
+    <!-- End #lead -->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        I'm an aspiring <b>Data Scientist</b>, currently pursuing <b>B.Tech. in Mathematics and Computing</b> at <b>Indian Institute of Technology, Delhi</b> and my interests lie in the domain of <b>Artificial Intelligence</b>, primarily focused around <b>Machine Learning</b>, <b>Computer Vision</b> and <b>Natural Language Processing</b>. I'm also interested in few areas of <b>Biology</b> like <b>Immunology</b>, <b>Genetics</b> and <b>Evolution</b>. My hobbies are computer programming and web development. Apart from academics, I love listening to music, watching football and teaching people.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End #about -->
+
+    <section id="education" class="background-alt">
+        <h2 class="heading">Education</h2>
+        <div id="education-timeline">
+            <div data-date="Present">
+                <h3>Indian Institute of Technology, Delhi</h3>
+                <h4>B.Tech. in Mathematics and Computing</h4>
+                <p>
+                    <b>CGPA:</b> 
+                </p>
+            </div>
+
+            <div data-date="2018">
+                <h3>Chennai Public School, Chennai</h3>
+                <h4>CBSE Std. XII</h4>
+                <p>
+                    <b>Marks:</b> 96.4%
+                </p>
+            </div>
+
+            <div data-date="2016">
+                <h3>Chennai Public School, Chennai</h3>
+                <h4>CBSE Std. X</h4>
+                <p>
+                    <b>CGPA:</b> 10
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End #education -->
+
+    <!--
+     <section id="experience" class="background-alt">
+        <h2 class="heading">Expereince</h2>
+        <div id="experience-timeline">
+            <div data-date="Present">
+                <h3>Indian Institute of Technology, Delhi</h3>
+                <h4>B.Tech. in Mathematics and Computing</h4>
+                <p>
+                    <b>CGPA:</b> 
+                </p>
+            </div>
+
+            <div data-date="2018">
+                <h3>Chennai Public School, Chennai</h3>
+                <h4>CBSE Std. XII</h4>
+                <p>
+                    <b>Marks:</b> 96.4%
+                </p>
+            </div>
+
+            <div data-date="2016">
+                <h3>Chennai Public School, Chennai</h3>
+                <h4>CBSE Std. X</h4>
+                <p>
+                    <b>CGPA:</b> 10
+                </p>
+            </div>
+        </div>
+    </section>-->
+    <!-- End #education -->
+
+    <section id="activities">
+        <h2 class="heading">Activities</h2>
+        <div class="activity-block">
+            <h3>Web Development Executive</h3>
+            <span class="activity-date">September 2019 - Present</span>
+            <h4>Student Incubation Cell, IIT Delhi</h4>
+            <ul>
+                <li>
+                    Conceptualise, design and develop the website and test it
+                </li>
+                <li>
+                    Help in organising events related to Startups for the Cell
+                </li>
+            </ul>
+        </div>
+        <!-- End .activity-block -->
+
+        <div class="activity-block">
+            <h3>Language Mentor</h3>
+            <span class="activity-date">August 2019 - Present</span>
+            <h4>Board for Student Welfare (BSW), IIT Delhi</h4>
+            <p>
+                Assist freshmen in overcoming English Language barrier by conducting interactive sessions throughout the semester           
+            </p>
+        </div>
+        <!-- End .activity-block -->
+
+        <div class="activity-block">
+            <h3>Executive</h3>
+            <span class="activity-date">July 2019 - Present</span>
+            <h4>Mathematics Society, IIT Delhi</h4>
+            <ul>
+                <li>
+                    Help in planning and organising events
+                </li>
+                <li>
+                    Manage the social media handles
+                </li>
+                <li>
+                    Design and develop a website for the Society
+                </li>
+            </ul>
+        </div>
+        <!-- End .activity-block -->
+
+        <div class="activity-block">
+            <h3>Volunteer</h3>
+            <!-- <span class="activity-date">July 2019 - Present</span> -->
+            <h4>National Service Scheme (NSS), IIT Delhi</h4>
+            <ul>
+                <li>
+                    <b>VIDYA Project:</b> Teach students of classes from 3rd to 12th to inculcate the fundamental concepts of all subjects
+                </li>
+                <li>
+                    <b>NAB Project:</b> Interact with the students at NAB, RK Puram , and assist them in learning their school subjects
+                </li>
+                <li>
+                    Preparing notes in certain topics of Mathematics for JEE Main to be used by the students under the <b>Garhwal Project</b>
+                </li>
+            </ul>
+        </div>
+        <!-- End .activity-block -->
+
+        <div class="activity-block">
+            <h3>Technical Executive</h3>
+            <span class="activity-date">August 2019 - October 2019</span>
+            <h4>Rendezvous, IIT Delhi</h4>
+            <p>
+                Part of the Web Front-end Development team and contributed towards designing of the same
+            </p>
+        </div>
+        <!-- End .activity-block -->
+
+    </section>
+    <!-- End #activity -->
+
+    <section id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project no-image">
+                    <!-- IF IMAGE
+                    <div class="project-image">
+                        <img src="img/project.png" />
+                    </div>
+                    -->
+                    <!-- End .project-image -->
+                    
+                    <div class="project-info">
+                        <h3>Web Designing & Development for SAC, IIT Delhi</h3>
+                        <p>
+                            Design and develop a new website for Student Affairs Council (SAC), IIT Delhi.
+                        </p>
+                        <a onclick="void(0)">In Progress</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3>Graph with Triangulation method [Java]</h3>
+                        <p>
+                            Approximated any shape in Real space as small triangular components to compute the Neighbours(of triangle/edge/vertex), type of Mesh obtained, Boundary edges, maximum Diameter in a connected component, Median, Number of Connected Components and Closest Components in terms of Euclidean distance which can be applied in real-life applications.
+                        </p>
+                        <a href="https://github.com/subhalingamd/graphs">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3>Jobs Scheduler & Manager [Java]</h3>
+                        <p>
+                            Used Red-Black Trees, Tries, Max-Heap and some other data structures and implemented a Job Scheduler to schedule and execute a Job of a Project by a User based on the priority (or wait-time) and resources available and reporting various other details like users who consume lots of resources, jobs belonging to a project/user and Job status efficiently.
+                        </p>
+                        <a href="https://github.com/subhalingamd/jobs-scheduler">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3>Analysis of Double Hashing and Separate Chaining</h3>
+                        <!--
+                        <div class="proj-prof">Prof. </div>                        
+                        <div class="project-date">Sept</div>
+                        -->
+                        <p>
+                            Analysed asymptotic complexities and collision rate of queries in Double Hashing and Separate Chaining techniques.
+                        </p>
+                        <a href="https://github.com/subhalingamd/hashing">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3>Selling & Buying Platform with Multithreading [Java]</h3>
+                        <p>
+                            Sellers add the items to a Catalogue maintained as a Priority Queue, which are sorted based on the priority of sellers and then sold to Consumers. Achieved concurrency using Multithreading without compromising on Thread Safety.
+                        </p>
+                        <a href="https://github.com/subhalingamd/consumer-producer">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3>Symbolic Differentiation [Python]</h3>
+                        <p>
+                            By parsing the given fully parenthesised infix expression, constructed a Binary Tree and thereby computed its derivative by traversal. The parser supports a variety of real functions like algebraic, trigonometric, exponential, composite functions.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3>Sound Detector Switch</h3>
+                        <p>
+                            A potential developed across Condensor Mic 's terminals due to sound is used as input to CE transistor whose output goes to a 555 timer IC in mono-stable configuration which delays the trigger signal and the output pulse from the timer goes to D-type flip flop which changes the state of the output from ON-OFF or OFF-ON.
+                        </p>
+                        <!--<a href="#">View Project</a>-->
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project no-image">
+                    <div class="project-info">
+                        <h3> Product Realisation by Manufacturing</h3>
+                        <p>
+                            Realised a Rube Goldberg machine along with a team of about 20 students, using processes like carpentry, welding, drilling.
+                        </p>
+                        <!--<a href="#">View Project</a>-->
+                    </div>
+                    <!-- End .project-info -->
+
+                </div>
+                <!-- End .project -->
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End #projects -->
+
+    <section id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Keras</li>
+            <li>Deep Learning</li>
+            <li>NumPy</li>
+            <li>Matlab</li>
+            <li>PHP</li>
+            <li>mySQL</li>
+            <li>CSS</li>
+            <li>jQuery</li>
+            <li>HTML</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>Verilog</li>
+            <li>Autodesk Inventor</li>
+            <li>SML</li>
+            <li>LaTeX</li>
+        </ul>
+    </section>
+    <!-- End #skills -->
+
+    
+    <section id="contact">
+        <div class="row">
+            <div class="col-md-5">
+                <h2 class="heading">Get in Touch</h2>
+            </div>
+            <div class="col-md-7">
+                <form id="contact-form" method="POST" action="https://formspree.io/subhalingam.d@gmail.com">
+                    <input type="hidden" name="_subject" value="Contact request from personal website" />
+                    <input type="email" name="_replyto" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 copyright">
+                    <p>
+                        Copyright &copy; 2020 Subhalingam D
+                    </p>
+                </div>
+                
+                <div class="col-sm-6 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/SubhalingamD" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <!--<li>
+                            <a href="https://stackoverflow.com/subhu2008" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>-->
+                        <li>
+                            <a href="https://linkedin.com/in/SubhalingamD" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/SubhalingamD" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://quora.com/Subhalingam-D" target="_blank"><i class="fa fa-quora" aria-hidden="true"></i></a>
+                        </li>
+                        <!--<li>
+                            <a href="https://twitter.com/subhalingamd" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>-->
+                        <li>
+                            <a href="https://www.facebook.com/SubhalingamD" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/subhu2008" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="mailto:subhalingam.d@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <!--<div class="row">
+                <div class="col-sm-12 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>-->
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // Wait for window load
+        document.onreadystatechange = function () {
+            var state = document.readyState
+            if (state == 'complete') {
+                document.getElementById('interactive');
+                $('html, body').scrollTop(0).show(); //Just in case user plays with scroll
+                $('#ld').fadeOut();
+
+                //Scroll down if hash is present
+                if (window.location.hash) {
+                        $('html, body').animate({
+                            scrollTop: $(window.location.hash).offset().top - $('header').height()
+                        }, 750)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

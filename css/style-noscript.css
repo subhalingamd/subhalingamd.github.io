@@ -1,0 +1,43 @@
+/* Remove loader*/
+#ld{
+    display: none;
+}
+
+#education-timeline>div, #experience-timeline>div {
+    background: var(--highlight-bg-color);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#education-timeline>div h3, #experience-timeline>div h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--text);
+    display: inline-block;
+    margin: 0
+}
+#education-timeline>div h4, #experience-timeline>div h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--text);
+    margin: 0 0 15px 0
+}
+#education-timeline>div p, #experience-timeline>div p {
+    color: var(--highlight-bg-color);
+    font-size: 0.9em;
+    margin: 0
+}
+#education-timeline:before,#education-timeline:after, #experience-timeline:before,#experience-timeline:after {
+    content: none
+}
+
+header, #mobile-menu-open {
+    background-color: var(--header-footer-bg);
+}
+
+header{
+  border-bottom: 2.5px solid #3498db;
+}
+
+header .logo{
+    visibility: visible;
+}
