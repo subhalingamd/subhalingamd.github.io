@@ -125,7 +125,13 @@
     <meta name="description" content="Subhalingam D is a sophomore at IIT Delhi and this is his personal website">
     <meta name="keywords" content="subhalingamd, subhalingam, subhu2008, subhu">
     <meta name="author" content="Subhalingam D">
-    <meta name="theme-color" content="#fafafa">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    
     <meta name="google-site-verification" content="mQBwSJChbaQDpmReGndwk2AHedJ9gcUu5bWEjTY-5uE" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -160,8 +166,8 @@
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
       <ul class="menu">
         <li><a href="#about">About</a></li>
-        <!---<li><a href="#experience">Experience</a></li>-->
         <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#activities">Activities</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -230,49 +236,63 @@
     </section>
     <!-- End #education -->
 
-    <!--
      <section id="experience" class="background-alt">
-        <h2 class="heading">Expereince</h2>
+        <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="Present">
-                <h3>Indian Institute of Technology, Delhi</h3>
-                <h4>B.Tech. in Mathematics and Computing</h4>
-                <p>
-                    <b>CGPA:</b> 
-                </p>
+            <div data-date="May '19 - Jul '19">
+                <h3>MateRate Education Pvt Ltd, Delhi</h3>
+                <h4>Machine Learning Researcher & Developer</h4>
+                <ul style="color:var(--text);">
+			<li>Leveraged Item Response Theory to map ability of students using item parameters to train Maximum Likelihood Estimator</li>
+			<li>Analysed predicted results, modified cost function and tweaked various parameters to improve performance significantly</li>
+			<li>Researched on existing Knowledge Tracing architectures to contribute in building an Adaptive Learning model</li>
+		</ul>
             </div>
 
-            <div data-date="2018">
-                <h3>Chennai Public School, Chennai</h3>
-                <h4>CBSE Std. XII</h4>
-                <p>
-                    <b>Marks:</b> 96.4%
-                </p>
+            <div data-date="May '19 - Jul '19">
+                <h3>MateRate Education Pvt Ltd, Delhi</h3>
+                <h4>Backend Web Developer and AWS Associate</h4>
+                <ul style="color:var(--text);">
+			<li>Designed database tables and built efficient Web APIs using Django REST framework for detailed analysis of results</li>
+			<li>Deployed Moodle and web applications into AWS using EC2, RDS, Elastic Beanstalk, EFS, S3 and CloudFront services</li>
+			<li>Added Load Balancers to instances, monitored metrics in CloudWatch and used Route53 to route end-users to domain</li>
+		</ul>
             </div>
 
-            <div data-date="2016">
-                <h3>Chennai Public School, Chennai</h3>
-                <h4>CBSE Std. X</h4>
-                <p>
-                    <b>CGPA:</b> 10
-                </p>
-            </div>
         </div>
-    </section>-->
-    <!-- End #education -->
+    </section>
+    <!-- End #experience -->
 
     <section id="activities">
         <h2 class="heading">Activities</h2>
+	<div class="activity-block">
+            <h3>Executive</h3>
+            <span class="activity-date">Jul '20 - Present</span>
+            <h4>Mathematics Society, IIT Delhi</h4>
+            <ul>
+                <li>
+                    Design and develop the society website
+                </li>
+                <li>
+                    Manage social media handles
+                </li>
+                <li>
+                    Plan & Organise various events
+                </li>
+            </ul>
+        </div>
+        <!-- End .activity-block -->
+	
         <div class="activity-block">
             <h3>Web Development Executive</h3>
-            <span class="activity-date">September 2019 - Present</span>
+            <span class="activity-date">Sept '19 - Jul '20</span>
             <h4>Student Incubation Cell, IIT Delhi</h4>
             <ul>
                 <li>
-                    Conceptualise, design and develop the website and test it
+                    Designed & Developed Entrepreneurship Portal for the Institute using Node.js, CSS and Javascript as a team
                 </li>
                 <li>
-                    Help in organising events related to Startups for the Cell
+                    <i>Got appreciation from Prof. V. Ramgopal Rao (Director) & Prof. P. V. Madhusudhan Rao for commendable work done</i>
                 </li>
             </ul>
         </div>
@@ -280,27 +300,24 @@
 
         <div class="activity-block">
             <h3>Language Mentor</h3>
-            <span class="activity-date">August 2019 - Present</span>
+            <span class="activity-date">Aug '19 - Dec '19</span>
             <h4>Board for Student Welfare (BSW), IIT Delhi</h4>
             <p>
-                Assist freshmen in overcoming English Language barrier by conducting interactive sessions throughout the semester           
+                Assisted freshmen in overcoming English Language barrier by conducting interactive sessions throughout the semester          
             </p>
         </div>
         <!-- End .activity-block -->
 
         <div class="activity-block">
             <h3>Executive</h3>
-            <span class="activity-date">July 2019 - Present</span>
+            <span class="activity-date">Jul '19 - Jul '20</span>
             <h4>Mathematics Society, IIT Delhi</h4>
             <ul>
                 <li>
-                    Help in planning and organising events
+                    Planned and organised various events
                 </li>
                 <li>
-                    Manage the social media handles
-                </li>
-                <li>
-                    Design and develop a website for the Society
+                    Managed the social media handles
                 </li>
             </ul>
         </div>
@@ -308,28 +325,32 @@
 
         <div class="activity-block">
             <h3>Volunteer</h3>
-            <!-- <span class="activity-date">July 2019 - Present</span> -->
+            <!-- <span class="activity-date">Jul '19 - Present</span> -->
             <h4>National Service Scheme (NSS), IIT Delhi</h4>
-            <ul>
+            <p>Over 120 hrs of contribution primarily in Teaching Projects</p>
+	    <ul>
                 <li>
-                    <b>VIDYA Project:</b> Teach students of classes from 3rd to 12th to inculcate the fundamental concepts of all subjects
+                    <b>VIDYA Project:</b> Taught students of classes from 3rd to 12th to inculcate the fundamental concepts of all subjects
                 </li>
                 <li>
-                    <b>NAB Project:</b> Interact with the students at NAB, RK Puram , and assist them in learning their school subjects
+                    <b>NAB Project:</b> Interacted with the students at NAB, RK Puram, and assisted them in learning their school subjects
                 </li>
                 <li>
-                    Preparing notes in certain topics of Mathematics for JEE Main to be used by the students under the <b>Garhwal Project</b>
+		    <b>Garhwal Project:</b> Prepared notes from certain chapters of Mathematics of Class 12 for usage in JEE Main preparation
                 </li>
+		<li>
+		    <b>Intellify:</b> Prepared concept videos from Chemistry Class 12 to help students understand the chapters during COVID-19
+		</li>
             </ul>
         </div>
         <!-- End .activity-block -->
 
         <div class="activity-block">
             <h3>Technical Executive</h3>
-            <span class="activity-date">August 2019 - October 2019</span>
+            <span class="activity-date">Aug '19 - Oct '19</span>
             <h4>Rendezvous, IIT Delhi</h4>
             <p>
-                Part of the Web Front-end Development team and contributed towards designing of the same
+                Part of the Web Front-end Development team
             </p>
         </div>
         <!-- End .activity-block -->
@@ -352,9 +373,21 @@
                     <div class="project-info">
                         <h3>Web Designing & Development for SAC, IIT Delhi</h3>
                         <p>
-                            Design and develop a new website for Student Affairs Council (SAC), IIT Delhi.
+                            Revamped the website using CSS & Javascript for better user experience and easy accessibility & retrieval of information.
                         </p>
                         <a onclick="void(0)">In Progress</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+					    
+		<div class="project no-image">
+                    <div class="project-info">
+                        <h3>Movie Review Sentiment Classifier using RNN</h3>
+                        <p>
+                            Leveraged RNNs with pre-trained GloVe word embeddings and LSTM layers to build a movie review classifier. Trained the model using IMDB dataset with 50k reviews after pre-processing and obtained an accuracy of about 88%.
+                        </p>
+                        <a href="https://github.com/subhalingamd/rnn-movie-review-sentiment-analysis">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -363,9 +396,9 @@
 
                 <div class="project no-image">
                     <div class="project-info">
-                        <h3>Graph with Triangulation method [Java]</h3>
+                        <h3>Graph with Triangulation</h3>
                         <p>
-                            Approximated any shape in Real space as small triangular components to compute the Neighbours(of triangle/edge/vertex), type of Mesh obtained, Boundary edges, maximum Diameter in a connected component, Median, Number of Connected Components and Closest Components in terms of Euclidean distance which can be applied in real-life applications.
+                            Approximated given shapes in 3D Real space into small triangular components and constructed a Graph data structure. Performed operations like finding neighbours, boundary edges, number of connected components, closest components.
                         </p>
                         <a href="https://github.com/subhalingamd/graphs">View Project</a>
                     </div>
@@ -375,9 +408,9 @@
 
                 <div class="project no-image">
                     <div class="project-info">
-                        <h3>Jobs Scheduler & Manager [Java]</h3>
+                        <h3>Jobs Scheduler & Manager</h3>
                         <p>
-                            Used Red-Black Trees, Tries, Max-Heap and some other data structures and implemented a Job Scheduler to schedule and execute a Job of a Project by a User based on the priority (or wait-time) and resources available and reporting various other details like users who consume lots of resources, jobs belonging to a project/user and Job status efficiently.
+                            Executed jobs added by each user for each project based on the priorities and resources; used Max-Heap, Red-Black Tree, Trie.
                         </p>
                         <a href="https://github.com/subhalingamd/jobs-scheduler">View Project</a>
                     </div>
@@ -401,7 +434,7 @@
                 </div>
                 <!-- End .project -->
 
-                <div class="project no-image">
+                <div class="project no-image" style="display:none;">
                     <div class="project-info">
                         <h3>Selling & Buying Platform with Multithreading [Java]</h3>
                         <p>
@@ -412,17 +445,19 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
+										   
                 <div class="project no-image">
                     <div class="project-info">
-                        <h3>Symbolic Differentiation [Python]</h3>
+                        <h3>Symbolic Differentiation</h3>
                         <p>
-                            By parsing the given fully parenthesised infix expression, constructed a Binary Tree and thereby computed its derivative by traversal. The parser supports a variety of real functions like algebraic, trigonometric, exponential, composite functions.
+                            Constructed a Binary Tree by parsing valid fully parenthesised infix expression and computed its derivative by traversal. The parser was made to support a variety of functions like algebraic, trigonometric, exponential & composite functions.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://github.com/subhalingamd/py-differentiate">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
+										  
                 <div class="project no-image">
                     <div class="project-info">
                         <h3>Sound Detector Switch</h3>
@@ -434,7 +469,7 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-                <div class="project no-image">
+                <div class="project no-image" style="display:none;">
                     <div class="project-info">
                         <h3> Product Realisation by Manufacturing</h3>
                         <p>
@@ -458,24 +493,34 @@
     <section id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
+	    <li>Python</li>
             <li>Java</li>
-            <li>Python</li>
-            <li>Keras</li>
+	    <li>MATLAB</li>
+            <li>C++</li>
+	    <li>C</li>
+	</ul>
+	<ul>
             <li>Deep Learning</li>
             <li>NumPy</li>
-            <li>Matlab</li>
+            <li>Keras</li>
+	    <li>TensorFlow</li>
+	    <li>Jupyter</li>
+	    <li>Pandas</li>
+	</ul>
+	<ul>
+	    <li>Web Development</li>
+	    <li>CSS</li>
+	    <li>MySQL</li>
             <li>PHP</li>
-            <li>mySQL</li>
-            <li>CSS</li>
+            <li>Django</li>
             <li>jQuery</li>
-            <li>HTML</li>
-            <li>C++</li>
-            <li>C</li>
-            <li>Verilog</li>
-            <li>Autodesk Inventor</li>
-            <li>SML</li>
-            <li>LaTeX</li>
-        </ul>
+	</ul>
+	<ul>
+	    <li>AWS</li>
+	    <li>LaTeX</li>
+	    <li>Bash</li>
+	    <li>SML NJ</li>
+	</ul>
     </section>
     <!-- End #skills -->
 
