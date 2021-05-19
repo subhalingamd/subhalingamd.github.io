@@ -701,25 +701,35 @@ footer {
 
 @media only screen and (max-width: 750px) {
     #education-timeline:before,#education-timeline:after {
-        left: 23px;
+        left: 12px;
     }
     #experience-timeline:before,#experience-timeline:after {
-        left: 23px;
+        left: 12px;
     }
     .vtimeline-date {
         width: auto;
         text-align: left;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         display: block;
         font-weight: 500;
-        margin-left: 70px;
+        margin-left: 40px;
+        top: 3px;
+    }
+    .vtimeline-point {
+      margin-bottom: 25px;
     }
     .vtimeline-icon {
         margin-left: 0;
+        font-size: 0.6em;
+        height: 25px;
+        width: 25px;
+    }
+    .vtimeline-icon > i {
+        display: none;
     }
     .vtimeline-content {
-        margin-left: 70px;
+        margin-left: 40px;
     }
 
 }
