@@ -370,7 +370,7 @@ Body & Footer
     content: '';
     top: 0;
     bottom: 0;
-    left: 303px;
+    left: 203px;
     right: auto;
     height: 100%;
     width: 3px;
@@ -385,10 +385,10 @@ Body & Footer
     background: var(--highlight-bg-color);
     background: linear-gradient(to bottom, #212121, #282828);
     top: 100%;
-    left: 303px;
+    left: 203px;
 }
 .vtimeline-content {
-    margin-left: 350px;
+    margin-left: 260px;
     background: var(--highlight-bg-color);
     padding: 15px;
     border-radius: 3px;
@@ -428,7 +428,7 @@ Body & Footer
     border-radius: 50%;
     float: left;
     z-index: 99;
-    margin-left: 280px;
+    margin-left: 180px;
 }
 .vtimeline-icon i {
     display: block;
@@ -436,7 +436,7 @@ Body & Footer
     margin-top: 10px;
 }
 .vtimeline-date {
-    width: 260px;
+    width: 160px;
     text-align: right;
     position: absolute;
     left: 0;
