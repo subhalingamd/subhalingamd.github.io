@@ -489,6 +489,8 @@ Body & Footer
 .activity-block ul {
     padding: 0 0 0 15px;
 }
+
+
 #projects {
     padding: 50px 15px;
     background: var(--main-bg-color);
@@ -498,34 +500,48 @@ Body & Footer
     color: var(--text-emphasis);
     margin-bottom: 50px;
 }
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex:before, .row.display-flex:after {
+  display: none;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-grow: 1;
+}
 .project {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
     overflow: hidden;
     background: var(--highlight-bg-color);
     border-radius: 4px;
+    text-align: left;
+    margin: 15px 0;
+    width: 100%;
 }
 .project-image {
     float: left;
 }
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
     padding: 15px;
+    width: 100%;
 }
 .project-info h3 {
     font-size: 1.5em;
     font-weight: 300;
     color: var(--text-emphasis);
+    margin: 0;
+}
+.project-info h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--text);
     margin: 0 0 15px 0;
 }
 .project-info p {
     color: var(--text);
     margin: 0 0 15px 0;
-    font-size: 0.9em;
+    font-size: 0.98em;
 }
 .project-info a {
     color: var(--text);
