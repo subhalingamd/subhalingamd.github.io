@@ -200,7 +200,6 @@ Body & Footer
 
 ================= */
 
-
 .heading {
     position: relative;
     display: inline-block;
@@ -346,7 +345,7 @@ Body & Footer
 #about p {
     color: var(--text);
     background: var(--highlight-bg-color);
-    text-align: justify;
+    text-align: left;
     padding: 20px;
     border-radius: 8px;
     margin: 0;
@@ -469,6 +468,7 @@ Body & Footer
     float: left;
     margin: 0;
     color: var(--text-emphasis);
+    display: block;
 }
 .activity-block span {
     color: var(--text);
@@ -537,6 +537,7 @@ Body & Footer
     font-weight: 300;
     color: var(--text);
     margin: 0 0 15px 0;
+    display: inline-block;
 }
 .project-info p {
     color: var(--text);
@@ -1010,4 +1011,10 @@ footer {
 
 .modal {
     max-width: 800px;
+}
+
+
+[data-url]:hover{
+  cursor: pointer;
+  filter: brightness(150%);
 }

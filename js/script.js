@@ -136,6 +136,15 @@
     });
 
 
+    $('[data-url]').each(function() {
+        if ($(this).css("display")!="inline-block"){
+            var innerText = $(this).html();
+            $(this).html("<div style='display:inline-block' data-url='"+$(this).data("url")+"'>"+innerText+"</div>");
+            $(this).removeAttr("data-url");
+        }
+    })
+
+    $('[data-url]').on("click",function() { /*window.location = $(this).data('url');*/ window.open($(this).data('url')); });
 
     // AJAX send
     window.addEventListener("DOMContentLoaded", function() {
