@@ -147,6 +147,10 @@
     $('[data-url]').on("click",function() { /*window.location = $(this).data('url');*/ window.open($(this).data('url')); });
 
 
+    // change current year in footer
+    $('.current-year').text(new Date().getFullYear());
+
+
     // ---- Typing effect ----
     $("#lead-content h2").html("<div style='display: inline-block; border-right: 3px solid #a0cfee; padding-right: 10px;'></div>")
     
