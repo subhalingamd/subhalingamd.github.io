@@ -222,7 +222,292 @@ Body & Footer
     background: #121212;
 }
 
-/* style for lead is now inline & integrated with load */
+/* style for lead is now integrated with loader */
+#lead {
+    position: fixed;   /* changed to 'relative' using JS*/
+    top: 0;
+    z-index: 1000; /*: ;*/
+
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    /*background: url(../img/dp.jpg) no-repeat right;
+    background-size: auto 100%;*/ /* will be replaced after loading done */
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    overflow: hidden;
+}
+#lead-content {
+    padding-left: 15px;
+    position: absolute;
+    z-index: 1002; /*10;*/
+    top: 50%;
+    /*left: 50%;
+    transform: translate(-50%, -50%);*/
+    transform: translateY(-50%);
+    text-align: left;
+}
+#lead-content h1,#lead-content h2 {
+    margin: 0;
+}
+#lead-content h1 {
+    padding-bottom: 10px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 0.9em;
+}
+#lead-content h2 {
+    padding-bottom: 25px;
+    color: #a0cfee;
+    font-weight: 700;
+    font-size: 2.25em;
+    margin-bottom: 15px;
+}
+#lead-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1001; /* 1;*/
+
+    animation: load-bg 1.75s linear 0 infinite; /* only for loading */
+}
+
+.load-ripple {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.load-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: load-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.load-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes load-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+@keyframes load-bg {
+  0% {
+    background-color: rgba(0,0,0,0.75);
+  }
+  50% {
+    background-color: rgba(0,0,0,1);
+  }
+  100% {
+    background-color: rgba(0,0,0,0.75);
+  }
+}
+
+/* init display none? */
+#lead-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  bottom: 35px;
+  color: #fff
+  margin-bottom: 5%;
+}
+#lead-down span {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  /*border-radius: 50%;*/
+  /*border: 3px solid #a0cfee;*/
+  text-align: center
+}
+.down-arrow{
+  position: absolute;
+  left:50%;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+
+    -webkit-animation: leadarrow 1.5s infinite;
+    animation: leadarrow 1.5s infinite;
+}
+.down-arrow:hover{
+  cursor:pointer;
+}
+@-webkit-keyframes leadarrow {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+    #lead {
+        /* to be modifed after load */
+        /*height: auto;
+        min-height: auto;
+        max-height: auto;*/
+        padding: 100px 15px;
+    }
+    #lead-content {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+    }
+    #lead-content h1 {
+        font-size: 3em;
+    }
+    #lead-content h2 {
+        font-size: 1.75em;
+    }
+
+    .load-ripple {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #lead-content h1 {
+        font-size: 2em;
+    }
+    #lead-content h2 {
+        font-size: 1.3em;
+    }
+    #lead-content a {
+        padding: 10px 20px;
+    }
+    #lead-down {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #lead-content h1 {
+        font-size: 1.5em;
+    }
+    #lead-content h2 {
+        font-size: 1em;
+    }
+    #lead-content a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+}
+
+/* parallax scrolling except for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (min-device-width: 1367px) {
+  #lead {
+    background-attachment: fixed;
+  }
+}
+
+/* for loading */
+#lead-content a {
+    visibility: hidden;
+}
+#lead-down {
+    visibility: hidden;
+}
+@media only screen and (max-width: 992px) {
+    #lead-content h1, #lead-content h2{
+        display: none;
+    }
+}
+
+/* After page loads */
+body:not(.loading)  #lead {
+    position: relative;
+    z-index: 1;
+    background: url(../img/dp.jpg) no-repeat right;
+    background-size: auto 100%;
+}
+body:not(.loading)  #lead-content {
+    z-index: 10;
+}
+body:not(.loading)  #lead-overlay {
+    z-index: 1;
+    animation: none;
+}
+body:not(.loading)  .load-ripple {
+    display : none;
+}
+body:not(.loading)  #lead-content a {
+    visibility: visible;
+}
+body:not(.loading)  #lead-content h1 {
+    display: block;
+}
+body:not(.loading)  #lead-content h2 {
+    display: block;
+}
+body:not(.loading)  #lead-down {
+    visibility: visible;
+}
+body:not(.loading)  #lead{
+    height: 100vh
+    min-height: 500px;
+    max-height: 1080px;
+}
+@media only screen and (min-device-width: 1367px) {
+    body:not(.loading)  #lead{
+        height: auto;
+        min-height: auto;
+        max-height: auto;
+    }
+}
 
 #about {
     padding: 75px 15px;
