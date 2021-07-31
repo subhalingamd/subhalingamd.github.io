@@ -15,8 +15,8 @@
 
             height: 100vh;
             width: 100vw;
-            /*min-height: 500px;
-            max-height: 1080px;*/
+            min-height: 100vh;
+            max-height: 100vh;
             /*background: url(../img/dp.jpg) no-repeat right;
             background-size: auto 100%;*/ /* will be replaced after loading done */
             background-color: rgb(255, 255, 255);
@@ -255,6 +255,50 @@
             }
         }
 
+
+        /* After page loads */
+        body:not(.loading)  #lead {
+            position: relative;
+            z-index: 1;
+            background: url(img/dp.jpg) no-repeat right;
+            background-size: auto 100%;
+        }
+        body:not(.loading)  #lead-content {
+            z-index: 10;
+        }
+        body:not(.loading)  #lead-overlay {
+            z-index: 1;
+            animation: none;
+        }
+        body:not(.loading)  .load-ripple {
+            display : none;
+        }
+        body:not(.loading)  #lead-content a {
+            visibility: visible;
+        }
+        body:not(.loading)  #lead-content h1 {
+            display: block;
+        }
+        body:not(.loading)  #lead-content h2 {
+            display: block;
+        }
+        body:not(.loading)  #lead-down {
+            visibility: visible;
+        }
+        body:not(.loading)  #lead{
+            height: 100vh
+            min-height: 500px;
+            max-height: 1080px;
+        }
+
+        @media only screen and (min-device-width: 1367px) {
+            body:not(.loading)  #lead{
+                height: auto;
+                min-height: auto;
+                max-height: auto;
+            }
+        }
+
     </style>
 
 
@@ -284,7 +328,7 @@
 
 </head>
 
-<body>
+<body class="loading">
     <!--Loader-->
     <!--<div class="loader" id="ld">
         <div id="ld-content">
@@ -865,65 +909,10 @@
             if (state == 'complete') {
                 document.getElementById('interactive');
                 $('html, body').scrollTop(0).show(); //Just in case user plays with scroll
+
+                // remove .loading class in body
+                $('body').removeClass("loading");
                 
-                // ready to use... remove loader add-ons
-                $('#lead').css({
-                    "position": "relative",
-                    "z-index": "1",
-                    "background": "url(img/dp.jpg) no-repeat right",
-                    "background-size": "auto 100%"
-                });
-
-                $('#lead-content').css({
-                    "z-index": "10"
-                });
-
-                $('#lead-overlay').css({
-                    "z-index": "1",
-                    "animation": "none"
-                });
-
-                $('.load-ripple').css({
-                    "display" : "none"
-                })
-
-                $('#lead-content a').css({
-                    "visibility": "visible"
-                });
-
-                $('#lead-content h1').css({
-                    "display": "block"
-                });
-
-                $('#lead-content h2').css({
-                    "display": "block"
-                });
-
-                $('#lead-down').css({
-                    "visibility": "visible"
-                });
-                
-
-                function resize_lead_for_992px(x) {
-                  if (x.matches) { // If media query matches
-                    $('#lead').css({
-                        "height": "auto",
-                        "min-height": "auto",
-                        "max-height": "auto"
-                    });
-                   
-                  } else {
-                    $('#lead').css({
-                        "height": "100vh",
-                        "min-height": "100vh",
-                        "max-height": "100vh"
-                    });
-                  }
-                }
-
-                var x = window.matchMedia("(max-width: 992px)");
-                resize_lead_for_992px(x); // Call listener function at run time
-                x.addListener(resize_lead_for_992px); // Attach listener function on state changes
 
                 //Scroll down if hash is present
                 if (window.location.hash) {
