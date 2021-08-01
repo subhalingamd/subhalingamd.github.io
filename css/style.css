@@ -501,7 +501,7 @@ body:not(.loading)  #lead{
     min-height: 500px;
     max-height: 1080px;
 }
-@media only screen and (min-device-width: 1367px) {
+@media only screen and (max-width: 992px) {
     body:not(.loading)  #lead{
         height: auto;
         min-height: auto;
