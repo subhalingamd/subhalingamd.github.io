@@ -5,123 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Subhalingam D</title>
-
-
-    <style>
-        /* For loader */
-        #ld{
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgb(255, 255, 255);
-            padding: 15px;
-            overflow: hidden;
-            z-index: 1000;
-        }
-
-        #ld #ld-content {
-            padding-left: 15px;
-            position: absolute;
-            z-index: 1002;
-            top: 50%;
-            /*left: 50%;
-            transform: translate(-50%, -50%);*/
-            transform: translateY(-50%);
-            text-align: left
-        }
-        #ld-content h1,#ld-content h2 {
-            margin: 0
-        }
-        #ld-content h1 {
-            padding-bottom: 10px;
-            color: #fff;
-            font-weight: 900;
-            font-size: 5em;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            line-height: 0.9em
-        }
-        #ld-content h2 {
-            padding-bottom: 25px;
-            color: #a0cfee;
-            font-weight: 500;
-            font-size: 2.25em;
-            margin-bottom: 15px
-        }
-        #ld-overlay {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0,0,0,0.75);
-            z-index: 1001;
-            animation: ld-bg 1.75s linear 0 infinite;
-        }
-        
-       
-        .lds-ripple {
-          display: inline-block;
-          position: relative;
-          width: 80px;
-          height: 80px;
-        }
-        .lds-ripple div {
-          position: absolute;
-          border: 4px solid #fff;
-          opacity: 1;
-          border-radius: 50%;
-          animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-        }
-        .lds-ripple div:nth-child(2) {
-          animation-delay: -0.5s;
-        }
-        @keyframes lds-ripple {
-          0% {
-            top: 36px;
-            left: 36px;
-            width: 0;
-            height: 0;
-            opacity: 1;
-          }
-          100% {
-            top: 0px;
-            left: 0px;
-            width: 72px;
-            height: 72px;
-            opacity: 0;
-          }
-        }
-        @keyframes ld-bg {
-          0% {
-            background-color: rgba(0,0,0,0.75);
-          }
-          50% {
-            background-color: rgba(0,0,0,1);
-          }
-          100% {
-            background-color: rgba(0,0,0,0.75);
-          }
-        }
-
-        @media only screen and (max-width: 992px) {
-
-            #ld-content{
-                margin-left: 20vw;
-            }
-
-            #ld-content h1, #ld-content h2{
-                display: none;
-            }
-
-        }
-
-    </style>
-
-
+    
     <meta name="description" content="Subhalingam D is a Senior Undergraduate at IIT Delhi and this is his personal website">
     <meta name="keywords" content="subhalingamd, subhalingam, subhu2008, subhu">
     <meta name="author" content="Subhalingam D">
@@ -148,18 +32,7 @@
 
 </head>
 
-<body>
-    <!--Loader-->
-    <div class="loader" id="ld">
-        <div id="ld-content">
-            <h1>Subhalingam D</h1>
-            <h2>Senior Undergraduate, IIT Delhi</h2>
-            <div class="lds-ripple"><div></div><div></div></div>
-        </div>
-        <div id="ld-overlay"></div>
-    </div>
-
-
+<body class="loading">
 
     <header class="header">
       <a href="#lead" class="logo">Subhalingam D</a>
@@ -176,10 +49,11 @@
       </ul>
     </header>
 
-    <section id="lead">
+    <section id="lead" class="lead__992_partial">
         <div id="lead-content">
             <h1>Subhalingam D</h1>
             <h2>Senior Undergraduate, IIT Delhi</h2>
+            <div class="load-ripple"><div></div><div></div></div>
             <a href="SubhalingamD.CV.pdf" target="_blank" class="btn-rounded-white">View Résumé</a>
         </div>
         <!-- End #lead-content -->
@@ -727,7 +601,10 @@
             if (state == 'complete') {
                 document.getElementById('interactive');
                 $('html, body').scrollTop(0).show(); //Just in case user plays with scroll
-                $('#ld').fadeOut();
+
+                // remove .loading class in body
+                $('body').removeClass("loading");
+                
 
                 //Scroll down if hash is present
                 if (window.location.hash) {

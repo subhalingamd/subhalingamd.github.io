@@ -1,7 +1,41 @@
-/* Remove loader*/
-#ld{
+/** for loader **/
+
+#lead {
+    position: relative;
+    z-index: 1;
+    background: url(../img/dp.jpg) no-repeat right;
+    background-size: auto 100%;
+}
+#lead-content {
+    z-index: 10;
+}
+#lead-overlay {
+    z-index: 1;
+    animation: none;
+}
+.load-ripple {
     display: none;
 }
+#lead-content a {
+    visibility: visible;
+}
+#lead-content h1, #lead-content h2 {
+    display: block;
+}
+#lead-down {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 992px) {
+    #lead{
+        height: auto;
+        min-height: auto;
+        max-height: auto;
+    }
+}
+
+/**********************************************/
+
 
 #lead-down span, .down-arrow:hover{
   cursor: default;
@@ -37,11 +71,9 @@
 header, #mobile-menu-open {
     background-color: var(--header-footer-bg);
 }
-
 header{
   border-bottom: 2.5px solid #3498db;
 }
-
 header .logo{
     visibility: visible;
 }
