@@ -334,8 +334,7 @@ Body & Footer
   text-align: center;
   z-index: 10;
   bottom: 35px;
-  color: #fff
-  margin-bottom: 5%;
+  color: #fff;
 }
 #lead-down span {
   cursor: pointer;
@@ -497,7 +496,7 @@ body:not(.loading)  #lead-down {
     visibility: visible;
 }
 body:not(.loading)  #lead{
-    height: 100vh
+    height: 100vh;
     min-height: 500px;
     max-height: 1080px;
 }
