@@ -170,7 +170,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   header li {
     float: left;
   }
@@ -620,6 +620,61 @@ body:not(.loading)  #lead{
     font-weight: 300;
     color: var(--text);
 }
+
+#publications {
+    padding: 75px 15px 20px 15px;
+    background: var(--main-bg-color);
+    text-align: center;
+}
+#publications h2 {
+    color: var(--text-emphasis);
+    margin-bottom: 50px;
+}
+.publication-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    background: var(--highlight-bg-color);
+    border-radius: 8px;
+    text-align: left;
+}
+.publication-block h3 {
+    font-weight: 500;
+    float: left;
+    margin: 0;
+    color: var(--text-emphasis);
+    display: block;
+}
+.publication-block h4 {
+    color: var(--text);
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+.publication-block .title{
+  color: var(--text-emphasis);
+}
+.publication-block .author{
+  font-style: italic;
+}
+.publication-block .journal{
+}
+.publication-block .link{
+  color: var(--text);
+  border: 1px solid var(--text);
+  padding: 3px 5px;
+  margin-right: 3px;
+}
+.publication-block p,.publication-block ul {
+    margin: 0;
+    color: var(--text);
+    font-weight:  300;
+    font-size: 0.9em;
+}
+.publication-block ul {
+    padding: 0 0 0 15px;
+}
+
 #activities {
     padding: 75px 15px 20px 15px;
     background: var(--main-bg-color);
