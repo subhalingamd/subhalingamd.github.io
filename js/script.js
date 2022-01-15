@@ -155,7 +155,7 @@
     $("#lead-content h2").html("<div style='display: inline-block; border-right: 3px solid #a0cfee; padding-right: 10px;'></div>")
     
     // List of sentences
-    var _CONTENT = ["Senior Undergraduate, IIT Delhi", "Intelligence S/W Intern, Samsung", "Full-Stack Web Developer", "Machine Learning R&D"];
+    var _CONTENT = ["Senior Undergraduate, IIT Delhi", "Intelligence S/W Intern, Samsung", "NLP and IR Research", "Full-Stack Web Developer"];
 
     // Current sentence being processed
     var _PART = 0;

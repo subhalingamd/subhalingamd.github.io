@@ -94,7 +94,7 @@
                 <h3 data-url="https://home.iitd.ac.in">Indian Institute of Technology, Delhi</h3>
                 <h4>B.Tech. in Mathematics and Computing</h4>
                 <p>
-                    <b>CGPA:</b> 8.005
+                    <b>CGPA:</b> 8.15
                 </p>
             </div>
 
@@ -120,14 +120,34 @@
      <section id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
+            <div data-date="Jan '22 - Ongoing">
+                <h3 data-url="https://knowdisdata.com/">KnowDis Data Science LLP, Delhi</h3>
+                <br/>
+                <h4>NLP Intern</h4>
+                <!-- <ul style="color:var(--text);">
+                    <li> Coming soon </li>
+                </ul> -->
+            </div>
+
+            <div data-date="Feb '21 - Ongoing">
+                <h3 data-url="https://github.com/data-iitd">Data Group, Indian Institute of Technology, Delhi</h3>
+                <br/>
+                <h4>Undergraduate Researcher <small>• Supervised by <span data-url="https://www.cse.iitd.ac.in/~srikanta">Prof. Srikanta Bedathur</span> & <span data-url="https://www.cse.iitd.ac.in/~ramanath/">Prof. Maya Ramanath</span> • In collaboration with <span data-url="https://www.research.ibm.com/artificial-intelligence/horizons-network/">IBM AI Horizons Network</span></small></h4>
+                <ul style="color:var(--text);">
+                    <li>Prepared a dataset by scrapping WikiHow pages from <i>Computers and Electronics</i> category and developed knowledge-injected BERT-based baselines</li>
+                    <li>Deployed NLP scheme to predict the actions taken & changes in properties of entities involved at each step of a process and performed error analysis</li>
+                    <li>Currently, surveying the literature and building models to predict the next most-likely action to be performed given a sequence of performed actions</li>
+                </ul>
+            </div>
+
             <div data-date="Jun '21 - Jul '21">
                 <h3 data-url="https://research.samsung.com/sri-d">Samsung R&D Institute, Delhi</h3>
                 <br/>
                 <h4>S/W Intelligence Intern</h4>
                 <ul style="color:var(--text);">
-                  <li>Developed sound source direction estimation module using time delay of arrival between mics for real-time audio input</li>
-                  <li>Added modules for tracking active sources & extracting signals of individual tracked sources for object identification</li>
-                  <li>Included stationary noise estimation module for background noise removal; achieved maximum localization error of 7°</li>
+                  <li>Developed sound source direction estimation module, using time delay of arrival between pairs of microphones in an array, for real-time audio input</li>
+                  <li>Added modules for mapping & tracking active sources and extracting signals of individual sources for downstream object identification pipeline</li>
+                  <li>Integrated stationary noise estimation module for ambient noise removal and reduced maximum direction of arrival error to 7°</li>
               </ul>
             </div>
 
@@ -136,14 +156,14 @@
                 <br/>
                 <h4 style="margin-top:5px;margin-bottom:3px;">Machine Learning Researcher & Developer</h4>
                 <ul style="color:var(--text);">
-                  <li>Trained ML models based on Item Response Theory to estimate ability of 5000+ students & difficulty of 200+ questions</li>
+                  <li>Developed Item Response Theory-based probabilistic models to estimate and analyze the ability of 5000+ students & difficulty of 200+ questions</li>
                 </ul>
                 <br/>
                 <h4 style="margin-bottom:3px;">Backend Web Developer and AWS Associate</h4>
                 <ul style="color:var(--text);">
-                  <li>Designed database schema, built Web APIs using Django REST framework & ideated system design for production</li>
-                  <li>Deployed Django backend to EC2 with MySQL database on RDS & React frontend to S3 with CloudFront CDN integration</li>
-                  <li>Set up Auto Scaling group with scaling policies & attached Load Balancer for traffic-based dynamic horizontal scaling</li>
+                  <li>Designed database schema & workflows, devised system design for production, built Web APIs using Django REST framework and tested them</li>
+                  <li>Deployed Django-based backend to EC2 with MySQL database layer using RDS, and React-based frontend to S3 with CloudFront CDN integration</li>
+                  <li>Set up Auto Scaling group with scaling policies (triggered by CloudWatch alarms) and attached Load Balancer for traffic-based horizontal scaling</li>
               </ul>
               <br/>
               <p><i>Received <a href="docs/LOR_MateRate.pdf" target="_blank" style="color: var(--text-disabled);"><b>Letter Of Recommendation</b></a> from CEO for exemplary work accomplishments in multiple roles & work ethics</i></p>
@@ -164,6 +184,7 @@
             </h4>
             <p>
                 <a href="https://arxiv.org/pdf/2104.07378" target="_blank" class="link">PDF</a>
+                <a href="https://github.com/data-iitd/TechTrack" target="_blank" class="link">Code</a>
                 <!--<a class="link">Cite</a>-->
             </p>
         </div>
@@ -176,7 +197,7 @@
 	    <div class="activity-block">
             <h3>Teaching Assisstant</h3>
             <span class="activity-date">Fall '21</span>
-            <h4>COL764: Information Retrieval & Web Search &nbsp; <i><small>(Taught by Prof. Srikanta Bedathur at IIT Delhi)</small></i></h4>
+            <h4>COL764: Information Retrieval & Web Search <br/> <i><small>(Graduate-level course taught by Prof. Srikanta Bedathur at IIT Delhi)</small></i></h4>
         </div>
         <!-- End .activity-block -->
 
@@ -285,6 +306,67 @@
         <div class="container">
             <div class="row display-flex">
 
+                <div class="col-md-6">      
+                    <div class="project no-image">
+                        <div class="project-info">
+                            <h3>chaii - Hindi and Tamil Question Answering</h3>
+                            <h4 data-url="https://www.cse.iitd.ac.in/~mausam">Prof. Mausam</h4>
+                            <p>
+                                Fine-tuned XLM-RoBERTa for multilingual Q/A using chaii-1 dataset augmented with MLQA, XQuAD & SQuAD and attained test Jaccard score of 68.72%.
+                            </p>
+                            <a href="https://github.com/subhalingamd/nlp-chaii-multilingual-qa" target="_blank">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+
+                <div class="col-md-6">      
+                    <div class="project no-image">
+                        <div class="project-info">
+                            <h3>Context-Sensitive Word Sense Disambiguation</h3>
+                            <h4 data-url="https://www.cse.iitd.ac.in/~mausam">Prof. Mausam</h4>
+                            <p>
+                                Compared non-contextual and contextual embeddings (GloVe+BiLSTM vs BERT) using WiC dataset for WSD task.
+                            </p>
+                            <a href="https://github.com/subhalingamd/nlp-contextual-word-meaning-comparision" target="_blank">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+
+                <div class="col-md-6">      
+                    <div class="project no-image">
+                        <div class="project-info">
+                            <h3>Tweet Sentiment Classifier</h3>
+                            <h4 data-url="https://www.cse.iitd.ac.in/~mausam">Prof. Mausam</h4>
+                            <p>
+                                Processed tweets with tweet normalization, internet slang dictionary, stemming, etc.; vectorized with TF-IDF; fed into LR.
+                            </p>
+                            <a href="https://github.com/subhalingamd/nlp-tweet-sentiment" target="_blank">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+
+
+                <div class="col-md-6">      
+                    <div class="project no-image">
+                        <div class="project-info">
+                            <h3>Rule-based Written-to-Spoken Text Converter</h3>
+                            <h4 data-url="https://www.cse.iitd.ac.in/~mausam">Prof. Mausam</h4>
+                            <p>
+                                Built a regex-based system that accounts for chunks with abbreviations, dates. numerical quantities and inflections. Obtained test F1-score of 97.94%.
+                            </p>
+                            <a href="https://github.com/subhalingamd/nlp-written2spoken" target="_blank">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+
 
                 <div class="col-md-6">      
                     <div class="project no-image">
@@ -292,7 +374,7 @@
                             <h3>Bankruptcy Prediction</h3>
                             <h4 data-url="https://web.iitd.ac.in/~niladri/">Prof. Niladri Chatterjee</h4>
                             <p>
-                                A Comparative Study on various Missing Value Imputation techniques like Simple Imputer, MissForest, KNN and Sampling Techniques like SMOTE, RUS, SMOTE-ENN, aimed towards improving the F1-score, using Polish companies bankruptcy dataset.
+                                Reviewed state-of-the-art bankruptcy prediction models and observed poor recall. Hypothesized class imbalance & missing values to be the reasons. Trained an ensemble model with Mean Imputation & SMOTE on Polish companies dataset and gained 10% improvement in recall.
                             </p>
                             <a href="https://github.com/cb3101/bankruptcy_prediction" target="_blank">View Project</a>
                         </div>
@@ -331,7 +413,7 @@
                     <!-- End .project -->
                 </div>
 
-                <div class="col-md-6">      
+                <div class="col-md-6" style="display: none;">      
                     <div class="project no-image">
                         <div class="project-info">
                             <h3>Dealing with Fake News on Social Media</h3>
@@ -367,7 +449,7 @@
                             <h3>Vector Space Model for News Articles Retrieval</h3>
                             <h4 data-url="https://www.cse.iitd.ac.in/~srikanta/">Prof. Srikanta Bedathur</h4>
                             <p>
-                                Implemented end-to-end retrieval system indexed with TF-IDF weights & cosine similarity-based ranking. Added prefix searching and named entity based searching (using StanfordNER) to narrow down the results of retreival. Compressed index file by encoding differences between document IDs & reduced size by half <i>(topped class leaderboard for index file size)</i>.
+                                Implemented end-to-end retrieval system indexed with TF-IDF weights & cosine similarity-based ranking. Added prefix searching and named entity based searching (using StanfordNER) to narrow down the results of retreival. Compressed index file by encoding differences between document IDs & reduced size by half <i>(topped class leaderboard for index size)</i>.
                             </p>
                             <a href="https://github.com/subhalingamd/ir-vsm" target="_blank">View Project</a>
                         </div>
@@ -398,7 +480,7 @@
                     <!-- End .project -->
                 </div>
     				
-                <div class="col-md-6">	    
+                <div class="col-md-6"  style="display: none;">	    
                     <div class="project no-image">
                         <div class="project-info">
                             <h3>Movie Review Sentiment Classifier using RNN</h3>
@@ -462,7 +544,7 @@
                     <!-- End .project -->
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6" style="display: none;">
                     <div class="project no-image">
                         <div class="project-info">
                             <h3>Consumer-Producer Problem with Multithreading</h3>
@@ -492,7 +574,7 @@
                     <!-- End .project -->
                 </div>
 
-                <div class="col-md-6">		  
+                <div class="col-md-6" style="display: none;">		  
                     <div class="project no-image">
                         <div class="project-info">
                             <h3>Sound Detector Switch</h3>
@@ -533,37 +615,34 @@
         <ul>
             <li>Python</li>
             <li>Java</li>
-            <li>C++</li>
             <li>C</li>
+            <li>C++</li>
             <li>MATLAB</li>
 	   </ul>
 	   <ul>
             <!--<li>Deep Learning</li>-->
-            <li>TensorFlow</li>
-            <li>Keras</li>
             <li>PyTorch</li>
+            <li>Transformers</li>
+            <li>Keras</li>
+            <li>TensorFlow</li>
             <li>NLTK</li>
-            <li>AllenNLP</li>
-            <li>Signal Processing</li>
-            <li>scikit-learn</li>
-            <li>OpenCV</li>
+            <li>Selenium</li>
             <li>Pandas</li>
-            <li>NumPy</li>
 	   </ul>
 	   <ul>
             <!--<li>Web Development</li>-->
             <li>Django</li>
-            <li>CSS</li>
+            <li>AWS</li>
             <li>MySQL</li>
+            <li>CSS</li>
             <li>PHP</li>
             <li>jQuery</li>
     	</ul>
     	<ul>
-    	    <li>AWS</li>
             <li>Bash</li>
             <li>Git</li>
             <li>Docker</li>
-            <li>HPC</li>
+            <li>HPC Cluster</li>
     	    <li>LaTeX</li>
     	</ul>
     </section>
