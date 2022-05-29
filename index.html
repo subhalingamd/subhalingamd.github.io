@@ -96,7 +96,7 @@
                 <h3 data-url="https://home.iitd.ac.in">Indian Institute of Technology, Delhi</h3>
                 <h4>B.Tech. in Mathematics and Computing</h4>
                 <p>
-                    <b>CGPA:</b> 8.15
+                    <b>CGPA:</b> 8.196
                 </p>
             </div>
 
@@ -151,6 +151,8 @@
                   <li>Added modules for mapping & tracking active sources and extracting signals of individual sources for downstream object identification pipeline</li>
                   <li>Integrated stationary noise estimation module for ambient noise removal and reduced maximum direction of arrival error to 7°</li>
               </ul>
+              <br/>
+              <p><i>Received <b>Pre-Placement Offer</b> for impeccable performance during internship</i></p>
             </div>
 
             <div data-date="May '20 - Jul '20">
@@ -168,7 +170,7 @@
                   <li>Set up Auto Scaling group with scaling policies (triggered by CloudWatch alarms) and attached Load Balancer for traffic-based horizontal scaling</li>
               </ul>
               <br/>
-              <p><i>Received <a href="docs/LOR_MateRate.pdf" target="_blank" style="color: var(--text-disabled);"><b>Letter Of Recommendation</b></a> from CEO for exemplary work accomplishments in multiple roles & work ethics</i></p>
+              <p><i>Received <a href="docs/LOR_MateRate.pdf" target="_blank" style="color: var(--text-disabled);"><b>Letter Of Recommendation</b></a> from CEO for exemplary work accomplishments</i></p>
             </div>
 
         </div>
@@ -307,6 +309,25 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row display-flex">
+
+                <div class="col-md-12">      
+                    <div class="project no-image">
+                        <div class="project-info">
+                            <h3>Identification of Hate Spreaders on Social Media <small>(Bachelor's Thesis)</small></h3>
+                            <h4 data-url="https://web.iitd.ac.in/~niladri/">Prof. Niladri Chatterjee</h4>
+                            <p>
+                                We propose a novel model that uses pre-trained word embeddings for encoding the words and incorporates the sentiment scores as weights to mark the importance of the words.
+                                It then computes a weighted sum to get the tweet representation and aggregates these to obtain the user representation.
+                                The user representation is finally fed to an ML classifier.
+                                Our model achieves an accuracy of 76% on the test set and outperforms the best model in the competition.
+                            </p>
+                            <!--<a href="https://github.com/subhalingamd/btp-hate-speech-profiling" target="_blank">View Project</a>-->
+                            <a>Ongoing Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
 
                 <div class="col-md-6">      
                     <div class="project no-image">
@@ -634,7 +655,9 @@
 	   <ul>
             <!--<li>Web Development</li>-->
             <li>Django</li>
+            <li>FastAPI</li>
             <li>AWS</li>
+            <li>Streamlit</li>
             <li>MySQL</li>
             <li>CSS</li>
             <li>PHP</li>
@@ -656,26 +679,34 @@
         <div class="row">
             <div class="col-md-6">
                 <h2 id="connect-heading">Connect</h2>
-                <div class="social-wrapper">
-                    
-                    <a href="https://github.com/subhalingamd" target="_blank"><i class="fa fa-github social github"></i></a>
-                    <a href="https://linkedin.com/in/SubhalingamD" target="_blank"><i class="fa fa-linkedin social linkedin"></i></a>
-                    <a href="https://twitter.com/subhalingamd" target="_blank"><i class="fa fa-twitter social twitter"></i></a>
-                    <!--<a href="https://quora.com/Subhalingam-D" target="_blank"><i class="fa fa-quora social quora"></i></a>-->
-                    <a href="https://youtube.com/SubhalingamD" target="_blank"><i class="fa fa-youtube-play social youtube"></i></a>
-                    <a href="https://www.facebook.com/SubhalingamD" target="_blank"><i class="fa fa-facebook social facebook"></i></a>
-                    <a href="https://www.instagram.com/subhu2008" target="_blank"><i class="fa fa-instagram social instagram"></i></a>
-                    
+                <div class="clearfix">
+                    <div class="social-wrapper">
+                        <a href="https://github.com/subhalingamd" target="_blank"><i class="fa fa-github social github"></i></a>
+                        <a href="https://linkedin.com/in/SubhalingamD" target="_blank"><i class="fa fa-linkedin social linkedin"></i></a>
+                        <a href="https://twitter.com/subhalingamd" target="_blank"><i class="fa fa-twitter social twitter"></i></a>
+                        <!--<a href="https://quora.com/Subhalingam-D" target="_blank"><i class="fa fa-quora social quora"></i></a>-->
+                        <a href="https://youtube.com/SubhalingamD" target="_blank"><i class="fa fa-youtube-play social youtube"></i></a>
+                        <a href="https://www.facebook.com/SubhalingamD" target="_blank"><i class="fa fa-facebook social facebook"></i></a>
+                        <a href="https://www.instagram.com/subhu2008" target="_blank"><i class="fa fa-instagram social instagram"></i></a>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="social-wrapper" style="color:var(--text);">
+                        <p><b>Email: &nbsp;</b><i>subhalingam.d [AT] gmail [DOT] com</i></p>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <h2 id="get-in-touch-heading">Get in Touch</h2>
+                <div class="alert alert-info" role="alert">
+                    Due to increased spam messages, this form is temporarily disabled and messages through this channel won't be monitored till then. Kindly write to me via email.
+                </div>
                 <form id="contact-form" method="POST" action="https://formspree.io/f/xknpvrjw">
-                    <input type="hidden" name="_subject" value="Contact request from personal website" />
-                    <input type="email" name="_replyto" placeholder="Your email" required>
-                    <textarea name="message" placeholder="Your message" required></textarea>
-                    <button type="submit">Send</button>
+                    <input type="hidden" name="_subject" value="Contact request from personal website" disabled />
+                    <input type="email" name="_replyto" placeholder="Your email" required disabled>
+                    <textarea name="message" placeholder="Your message" required disabled></textarea>
+                    <button type="submit" disabled>Send</button>
                 </form>
                 <!--<p>Or write to me directly at <a href="mailto:mail@subhalingamd.me">mail@subhalingamd.me</a>.-->
             </div>

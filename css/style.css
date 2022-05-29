@@ -24,6 +24,12 @@ body {
   }
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 header {
   background-color: transparent;
   position: fixed;
@@ -891,11 +897,6 @@ body:not(.loading)  #lead{
   float: right;
   text-align: right;
 }
-.social-wrapper::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 .social{
   display: inline-block;
   padding: 12px 0;
@@ -964,6 +965,19 @@ body:not(.loading)  #lead{
 .github:hover{
   color:  #ffffff;
   background-color: transparent;
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  max-width: 500px;
+  text-align: left;
+}
+.alert-info {
+  background-color: var(--main-bg-color);
+  border-color: var(--text-disabled);
+  color: var(--text-disabled);
 }
 
 
