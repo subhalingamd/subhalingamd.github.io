@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Subhalingam D</title>
     
-    <meta name="description" content="Subhalingam D is a Senior Undergraduate at IIT Delhi and this is his personal website">
-    <meta name="keywords" content="subhalingamd, subhalingam, subhu2008, subhu">
+    <meta name="description" content="Subhalingam D is a Data Scientist at KnowDis Data Science. He completed his undergraduation from IIT Delhi. This is his personal website.">
+    <meta name="keywords" content="subhalingamd, subhalingam, subhu2008, subhu, subha">
     <meta name="author" content="Subhalingam D">
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000">
@@ -53,7 +53,7 @@
     <section id="lead" class="lead__992_partial">
         <div id="lead-content">
             <h1>Subhalingam D</h1>
-            <h2>Senior Undergraduate, IIT Delhi</h2>
+            <h2>Data Scientist at KnowDis</h2>
             <div class="load-ripple"><div></div><div></div></div>
             <a href="/resume/" target="_blank" class="btn-rounded-white">View Résumé</a>
         </div>
@@ -78,9 +78,10 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-			    Subhalingam is currently pursuing <b>B.Tech. in Mathematics and Computing</b> from the <b>Indian Institute of Technology, Delhi</b>. 
-			    His interests lie in <b>Natural Language Processing (NLP)</b>, specifically in the areas of <i>Multilinguality</i>, <i>Q/A</i> and <i>Translation</i>, <b>Software Development</b> and <b>Back-end Development</b>. 
-			    He is also open to exploring System Design and Cloud Computing. 
+			    Subhalingam is interested in the broad areas of Natural Language Processing (NLP), Information Retrieval (IR) and Deep Learning.
+                He currently works as a Data Scientist at KnowDis Data Science and holds a B.Tech. degree in Mathematics and Computing from the Indian Institute of Technology, Delhi (IIT Delhi).
+                He has worked on building neural Q&A, machine translation and recommender systems across a variety of domains.
+                He is specifically interested in applying NLP techniques to Indian languages.
 			    Apart from coding, one can also find him listening to music, watching football, teaching other people, having some plates of biryani or sleeping. 
                     </p>
                 </div>
@@ -92,7 +93,7 @@
     <section id="education" class="background-alt">
         <h2 class="heading">Education</h2>
         <div id="education-timeline">
-            <div data-date="Present">
+            <div data-date="2022">
                 <h3 data-url="https://home.iitd.ac.in">Indian Institute of Technology, Delhi</h3>
                 <h4>B.Tech. in Mathematics and Computing</h4>
                 <p>
@@ -122,39 +123,76 @@
      <section id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="Jan '22 - Ongoing">
+            <div data-date="May '22 - Present">
                 <h3 data-url="https://knowdisdata.com/">KnowDis Data Science LLP, Delhi</h3>
                 <br/>
-                <h4>NLP Intern</h4>
+                <h4>Data Scientist</h4>
+
+                <b style="color:var(--text);">Product Category Search Engine (for IndiaMART)</b>
                 <ul style="color:var(--text);">
-                    <li>Devised a GPT2-based classification model and added heuristics based on analysis for tagging product categories from 97k labels</li>
-                    <li>Fine-tuned T5 model for query paraphrasing & queries generation from product categories to deal with tail categories in the data</li>
-                    <li>Outperformed previous seq2seq system (3x faster response time; +1% accuracy) and was deployed to production on IndiaMART</li>
+                    <li>Observed recall@2 of 94% (+6% than recall@1) and motivated to build a system to rescore top-k categories for improving accuracy</li>
+                    <li>Built a reranker that encodes the query & retrieved categories independently, aligns each query token with the most relevant category token and aggregates the similarity scores across the query; the category embeddings are pre-computed offline and cached in memory</li>
+                    <li>Revised confidence classification rules, resulting in 82% (+6%) coverage for high-confidence class while maintaining accuracy at 95.5%</li>
+                    <li>Attained a 1-2% gain in overall accuracy and currently working on parallelizing the encoding step in the reranker with the retriever</li>
+                </ul>
+                <br/>
+                <b style="color:var(--text);">Contextual Query Understanding (for IndiaMART)</b>
+                <ul style="color:var(--text);">
+                    <li>Developed a two-stage system to identify all the relevant attributes mentioned in a query and extract their corresponding values</li>
+                    <li>Trained BART and RoBERTa models using processed product names and specifications data for attributes identification and labelling</li>
+                    <li>Formulated a negative sampling strategy and made input layer modifications to tackle incomplete tagging in the data during training</li>
+                    <li>Deployed the system using FastAPI and presented a demo to the client; planned to integrate with search system for refining results</li>
+                </ul>
+                <br/>
+                <b style="color:var(--text);">English-to-Hindi Translator with Style Restriction</b>
+                <ul style="color:var(--text);">
+                    <li>Built an mBART-based translation baseline for converting English texts to Hindi in a specified style using in-house parallel corpora</li>
+                    <li>Obtained the English translations for scraped monolingual Hindi data using Google Translate API to augment the training data</li>
+                    <li>Reviewing existing works on controlling styles in text generation, specifically for low-resource settings, to create improved systems</li>
+                </ul>
+                <br/>
+                <b style="color:var(--text);">Other contributions:</b>
+                <ul style="color:var(--text);">
+                    <li>Explored non-autoregressive generation methods to convert Roman Hindi words in search queries to English to achieve low-latency</li>
+                    <li>Experimented with lexical string matching using Elasticsearch to handle model numbers in a search query</li>
                 </ul>
             </div>
 
-            <div data-date="Feb '21 - Ongoing">
+            <div data-date="Jan '22 - May '22">
+                <h3 data-url="https://knowdisdata.com/">KnowDis Data Science LLP, Delhi</h3>
+                <br/>
+                <h4>Data Science Intern</h4>
+                <ul style="color:var(--text);">
+                    <li>Devised an NLP scheme to predict the most relevant product category (from 113k possible labels) from user queries/product listings</li>
+                    <li>Trained a transformer-based classifier on automatically labelled data and added heuristics to improve knowledge of category labels</li>
+                    <li>Incorporated causal attention mask, which improved results; fine-tuned T5 model for oversampling under-represented categories</li>
+                    <li>Achieved similar accuracy (~88%) as the previous seq2seq model while significantly reducing average response time (3x faster) and completely eliminating timeouts</li>
+                    <li>The model was integrated with IndiaMART's search system and was deployed in production</li>
+                </ul>
+            </div>
+
+            <div data-date="Feb '21 - Apr '22">
                 <h3 data-url="https://github.com/data-iitd">Data Group, Indian Institute of Technology, Delhi</h3>
                 <br/>
                 <h4>Undergraduate Researcher <small>• Supervised by <span data-url="https://www.cse.iitd.ac.in/~srikanta">Prof. Srikanta Bedathur</span> & <span data-url="https://www.cse.iitd.ac.in/~ramanath/">Prof. Maya Ramanath</span> • In collaboration with <span data-url="https://www.research.ibm.com/artificial-intelligence/horizons-network/">IBM AI Horizons Network</span></small></h4>
                 <ul style="color:var(--text);">
-                    <li>Prepared a dataset by scrapping WikiHow pages from <i>Computers and Electronics</i> category and developed knowledge-injected BERT-based baselines</li>
-                    <li>Deployed NLP scheme to predict the actions taken & changes in properties of entities involved at each step of a process and performed error analysis</li>
-                    <li>Currently, surveying the literature and building models to predict the next most-likely action to be performed given a sequence of performed actions</li>
+                    <li>Prepared a dataset consisting of How-to troubleshooting FAQs by scraping WikiHow pages from Computers and Electronics category</li>
+                    <li>Constructed BERT-based baselines to predict changes in properties of the entities involved at each step of the process</li>
+                    <li>Surveyed the literature to build next-step recommenderfrom a given sequence of performed actions and developed LSTM baselines</li>
                 </ul>
             </div>
 
             <div data-date="Jun '21 - Jul '21">
                 <h3 data-url="https://research.samsung.com/sri-d">Samsung R&D Institute, Delhi</h3>
                 <br/>
-                <h4>S/W Intelligence Intern</h4>
+                <h4>Software Engineering Intern (S/W Intelligence Team)</h4>
                 <ul style="color:var(--text);">
-                  <li>Developed sound source direction estimation module, using time delay of arrival between pairs of microphones in an array, for real-time audio input</li>
-                  <li>Added modules for mapping & tracking active sources and extracting signals of individual sources for downstream object identification pipeline</li>
-                  <li>Integrated stationary noise estimation module for ambient noise removal and reduced maximum direction of arrival error to 7°</li>
+                    <li>Developed sound source direction estimation module using time delay of arrival of signals between pairs of microphones in an array</li>
+                    <li>Added modules for tracking active sound sources and extracting individual signals for downstream object identification pipeline</li>
+                    <li>Integrated stationary noise estimation module for ambient noise removal and reduced maximum direction of arrival error to 7°</li>
               </ul>
               <br/>
-              <p><i>Received <b>Pre-Placement Offer</b> for impeccable performance during internship</i></p>
+              <p><i>Received <b>Pre-Placement Offer</b> for impeccable performance during the internship</i></p>
             </div>
 
             <div data-date="May '20 - Jul '20">
@@ -162,17 +200,17 @@
                 <br/>
                 <h4 style="margin-top:5px;margin-bottom:3px;">Machine Learning Researcher & Developer</h4>
                 <ul style="color:var(--text);">
-                  <li>Developed Item Response Theory-based probabilistic models to estimate and analyze the ability of 5000+ students & difficulty of 200+ questions</li>
+                  <li>Developed Item Response Theory-based models to estimate and analyze the ability of 5000+ students & difficulty of 200+ questions</li>
                 </ul>
                 <br/>
                 <h4 style="margin-bottom:3px;">Backend Web Developer and AWS Associate</h4>
                 <ul style="color:var(--text);">
-                  <li>Designed database schema & workflows, devised system design for production, built Web APIs using Django REST framework and tested them</li>
-                  <li>Deployed Django-based backend to EC2 with MySQL database layer using RDS, and React-based frontend to S3 with CloudFront CDN integration</li>
-                  <li>Set up Auto Scaling group with scaling policies (triggered by CloudWatch alarms) and attached Load Balancer for traffic-based horizontal scaling</li>
-              </ul>
-              <br/>
-              <p><i>Received <a href="docs/LOR_MateRate.pdf" target="_blank" style="color: var(--text-disabled);"><b>Letter Of Recommendation</b></a> from CEO for exemplary work accomplishments</i></p>
+                    <li>Designed database schema and built Web APIs using Django REST framework to display students’ performance reports to parents</li>
+                    <li>Deployed Django backend using Elastic Beanstalk with MySQL on RDS and React frontend to S3 with CloudFront CDN integration</li>
+                    <li>Set up Auto Scaling group and attached Load Balancerfor horizontal scaling; the portal went live with the results of 5000+ students</li>
+                </ul>
+                <br/>
+                <p><i>Received <a href="docs/LOR_MateRate.pdf" target="_blank" style="color: var(--text-disabled);"><b>Letter Of Recommendation</b></a> from CEO for exemplary work accomplishments</i></p>
             </div>
 
         </div>
@@ -202,14 +240,14 @@
         <h2 class="heading">Activities</h2>
 	    <div class="activity-block">
             <h3>Teaching Assisstant</h3>
-            <span class="activity-date">Fall '21</span>
+            <span class="activity-date">Aug '21 - Dec '21</span>
             <h4>COL764: Information Retrieval & Web Search <br/> <i><small>(Graduate-level course taught by Prof. Srikanta Bedathur at IIT Delhi)</small></i></h4>
         </div>
         <!-- End .activity-block -->
 
         <div class="activity-block">
             <h3>General Secretary</h3>
-            <span class="activity-date">Aug '21 - Ongoing</span>
+            <span class="activity-date">Aug '21 - Jul '22</span>
             <h4 data-url="http://mathsoc.iitd.ac.in">Mathematics Society, IIT Delhi</h4>
         </div>
         <!-- End .activity-block -->
@@ -689,7 +727,7 @@
                         <!--<a href="https://quora.com/Subhalingam-D" target="_blank"><i class="fa fa-quora social quora"></i></a>-->
                         <a href="https://youtube.com/SubhalingamD" target="_blank"><i class="fa fa-youtube-play social youtube"></i></a>
                         <a href="https://www.facebook.com/SubhalingamD" target="_blank"><i class="fa fa-facebook social facebook"></i></a>
-                        <a href="https://www.instagram.com/subhu2008" target="_blank"><i class="fa fa-instagram social instagram"></i></a>
+                        <a href="https://www.instagram.com/subhalingamd" target="_blank"><i class="fa fa-instagram social instagram"></i></a>
                     </div>
                 </div>
                 <div class="clearfix">
