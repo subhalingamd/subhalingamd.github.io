@@ -155,7 +155,7 @@
     $("#lead-content h2").html("<div style='display: inline-block; border-right: 3px solid #a0cfee; padding-right: 10px;'></div>")
     
     // List of sentences
-    var _CONTENT = ["NLP/IR Research", "Data Scientist at KnowDis", "IIT Delhi | ex- Samsung Research"];
+    var _CONTENT = ["ML & NLP Research", "Data Scientist at KnowDis AI & Molecule AI", "IIT Delhi | ex- Samsung Research"];
 
     // Current sentence being processed
     var _PART = 0;
