@@ -146,8 +146,8 @@
                         metadata like title and specifications</li>
                     <li>Curated training data from a 120M+ product catalog and augmented it with task-specific
                         heuristics to improve data quality</li>
-                    <li>Fine-tuned a decoder-based retriever; aggregated results using Mean Reciprocal Rank to shortlist
-                        candidates across multiple retrievers</li>
+                    <li>Fine-tuned a decoder-based retriever; aggregated candidate rankings using Reciprocal Rank Fusion
+                        across multiple retrievers</li>
                     <li>Developed few-shot prompts for Qwen LLM reranker for single-step decoding; optimized latency
                         using prefix-caching and vLLM</li>
                     <li>Achieved 13% accuracy gain, reduced grossly wrong predictions by 30%, and maintained 92%+
